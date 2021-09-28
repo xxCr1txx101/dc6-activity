@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-7 offset-md-3 mt-3">
+        <div class="card">
+            <div class="card-header text-white bg-primary">
+                  <div class="card-title">
+                    <h3 class="title">{{ title }}</h3>
+                    <div class="buttons">
+                        <button class="btn btn-info" (click)="showFemale()">F</button>
+                        <button class="btn btn-info" (click)="showMale()">M</button>
+                        <button class="btn btn-info" (click)="showAll()">A</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let student of display" >
+                        {{ student.name }}
+                        <span class="badge badge-info float-right">{{ student.course }}</span>
+                    </li>           
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
